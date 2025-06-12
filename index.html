@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,17 @@
 
 
 </head>
+
 <body>
   <nav id="desktop-nav">
     <div class="logo">Challa Divya Teja Naga Venkata Prasad</div>
     <div>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#experience">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#profiles">Profiles</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -24,19 +28,22 @@
   <nav id="hamburger-nav">
     <div class="logo">Challa Divya Teja Naga Venkata Prasad</div>
     <div class="hamburger-menu">
-      <div class="hambur ger-icon" onclick="toggleMenu()">
+      <div class="hamburger-icon" onclick="toggleMenu()">
         <span></span>
         <span></span>
         <span></span>
       </div>
       <div class="menu-links">
         <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <li><a href="#experience" onclick="toggleMenu()">Skills</a></li>
-        <li><a href="#projects"  onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact"  onclick="toggleMenu()">Contact</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#profiles" onclick="toggleMenu()">Profiles</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </div>
     </div>
   </nav>
+
   <section id="profile">
     <div class="section__pic-container">
       <img src="./assets/profile-pic.jpg" alt="Teja Profile Picture">
@@ -46,110 +53,237 @@
       <h1 class="title">Challa Teja</h1>
       <P class="section__text__p2">Coder</P>
       <div>
-        <button class="btn btn-color-2" 
-        onclick="window.open('./assets/Teja_Challa_Resume..pdf')">
-      Download CV
-      </button>
+        <button class="btn btn-color-2" onclick="window.open('./assets/Teja_Challa_Resume..pdf')">
+          Download CV
+        </button>
 
-      <button class="btn btn-color-1" 
-      onclick="location.href='./#contact'">
-      Contact Info
-  </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
       </div>
       <div id="socials-container">
-        <img 
-        src="./assets/linkedin.png" 
-        alt="My LinkedIn Profile"
-        class="icon" 
-        onclick="location.href='https://linkedin.com/in/challa-divya-teja-naga-venkata-prasad-045335260/'"
-        />
-        <img 
-        src="./assets/github.png" 
-        alt="My Github Profile"
-        class="icon" 
-        onclick="location.href='https://github.com/Challateja12345'"
-        />
+        <img src="./assets/linkedin.png" alt="My LinkedIn Profile" class="icon"
+          onclick="location.href='https://linkedin.com/in/challa-divya-teja-naga-venkata-prasad-045335260/'" />
+        <img src="./assets/github.png" alt="My Github Profile" class="icon"
+          onclick="location.href='https://github.com/Challateja12345'" />
       </div>
     </div>
-    <img 
-    src="./assets/arrow.png" 
-    alt="Arrow icon" 
-    class="icon arrow" 
-    onclick="location.href='./#about'"
-    />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#about'" />
   </section>
+
+
   <section id="about">
     <p class="section__text__p1">Get To Know More</p>
     <h1 class="title">About Me</h1>
     <div class="section-container">
       <div class="section__pic-container">
-        <img 
-        src="./assets/about-pic-3.jpg"
-        alt="Profile Picture"
-        class="about-pic"
-        />
+        <img src="./assets/about-pic-3.jpg" alt="Profile Picture" class="about-pic" />
       </div>
       <div class="about-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <img 
-            src="./assets/experience.png" 
-            alt="Experience icon" 
-            class="icon"
-            />
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
             <h3>Certifications</h3>
             <p class="certification__title">AWS Cloud Practitioner Essentials</p>
             <p class="certification__details">AWS - Certificate of Completion</p>
+            <button class="btn-color-3" onclick="window.open('./assets/AWS.pdf')">
+              View
+            </button>
+            </br>
+            </br>
+            <p class="certification__details">These are all the certifications I've completed to support my career
+              goals and showcase my knowledge in relevant areas.
+            </p>
+            <button class="btn-color-3"
+              onclick="window.open('https://drive.google.com/drive/folders/1Gmq9b1rBGo1dkIRjbqPqBTHjern7Phnc?usp=drive_link')">
+              View
+            </button>
           </div>
           <div class="details-container">
-            <img 
-            src="./assets/education.png" 
-            alt="Education icon" 
-            class="icon"
-            />
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
             <h3>Education</h3>
             <p class="certification__title">B.Tech - Information Technology </p>
-            <p class="certification__details">Aditya College of Engineering and Technology</p>
+            <p class="certification__details">Aditya College of Engineering and Technology - Surampalem</p>
+            <p class="Grade_details">CGPA : 8.1/10</p>
             </br>
             <p class="certification__title">Intermediate - MPC</p>
-            <p class="certification__details">Sri Chaitanya Juniour College</p>
+            <p class="certification__details">Sri Chaitanya Juniour College - Palakollu</p>
+            <p class="Grade_details">Grade : 78.5%</p>
             </br>
             <p class="certification__title">10th - SSC</p>
-            <p class="certification__details">Z.P.H.S High School</p>
-
+            <p class="certification__details">Z.P.H.S High School - Digamarru</p>
+            <p class="Grade_details">CGPA : 9.8/10</p>
           </div>
         </div>
         <div class="text-container">
           <p>
-            Hello! I am Challa Divya Teja Naga Venkata Prasad, a third-year Information Technology (IT) 
-            student at Aditya College of Engineering and Technology. I have good programming 
-            skills with quick learning ability, leadership qualities and effective communication 
+            Hello! I am Challa Divya Teja Naga Venkata Prasad, a third-year Information Technology (IT)
+            student at Aditya College of Engineering and Technology. I have good programming
+            skills with quick learning ability, leadership qualities and effective communication
             skills. I'm committed to finding a position where I can comfortably use my skills in a reputable company.
           </p>
         </div>
       </div>
     </div>
-    <img 
-    src="./assets/arrow.png" 
-    alt="Arrow icon" 
-    class="icon arrow" 
-    onclick="location.href='./#experience'"
-    />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
   </section>
+
   <section id="experience">
+    <div class="section-heading">
+      <p class="section__text__p1">My Experiences</p>
+      <h1 class="title">Experience</h1>
+    </div>
+    <div class="content-card">
+      <div class="experience-container">
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-logo">
+              <img src="./assets/aws.png" alt="AWS-icon" class="icon contact-icon aws-icon" />
+            </div>
+            <div class="experience-title">
+              <h3>AWS Cloud Trainee</h3>
+              <div class="company-info">
+                <span class="company-name">Innovative Origin</span>
+                <span class="experience-date">(2024) Jul - Sep · 3 months</span>
+                <div class="experience-location">
+                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <span>Remote</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-details">
+            <ul class="experience-bullets">
+              <p>
+                1. Gained hands-on experience with 20+ AWS services including EC2, S3, VPC, IAM, RDS and others.
+              </p>
+              <p>
+                2. Configured and managed cloud infrastructure with security best practices.
+              </p>
+              <p>
+                3. Automated deployments using CloudFormation and monitored systems with CloudWatch.
+              </p>
+              <p>
+                4. Optimized performance and implemented networking essentials.
+              </p>
+            </ul>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-logo">
+              <img src="./assets/aiml.png" alt="Aiml-icon" class="icon contact-icon aiml-icon" />
+            </div>
+            <div class="experience-title">
+              <h3>AI/ML Intern</h3>
+              <div class="company-info">
+                <span class="company-name">APSSDC</span>
+                <span class="experience-date">(2024) May - Jun · 2 months</span>
+                <div class="experience-location">
+                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <span>Remote</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="experience-details">
+            <ul class="experience-bullets">
+              <p>
+                1. Built a sentiment analysis model with 80% accuracy using Naive Bayes classifier.
+              </p>
+              <p>
+                2. Applied NLP techniques including tokenization and TF-IDF on real-time reviews.
+              </p>
+              <p>
+                3. Utilized Python libraries: Pandas, NLTK, Word Cloud, and Scikit-learn.
+              </p>
+              <p>
+                4. Evaluated model performance using various ML metrics.
+              </p>
+            </ul>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-logo">
+              <img src="./assets/coding.png" alt="Coding-icon" class="icon contact-icon Coding-icon" />
+            </div>
+            <div class="experience-title">
+              <h3>Web Development Intern</h3>
+              <div class="company-info">
+                <span class="company-name">Tech-Sonix</span>
+                <span class="experience-date">April 2024 · 1 month</span>
+                <div class="experience-location">
+                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <span>Remote</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="experience-details">
+            <ul class="experience-bullets">
+              <p>
+                1. Developed a functional calculator using HTML, CSS, and JavaScript.
+              </p>
+              <p>
+                2. Designed an engaging landing page with responsive design.
+              </p>
+              <p>
+                3. Gained practical experience in front-end development and debugging.
+              </p>
+            </ul>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-logo">
+              <img src="./assets/full stack.png" alt="FullStack-icon" class="icon contact-icon fullstack-icon" />
+            </div>
+            <div class="experience-title">
+              <h3>FullStack Developer - MERN Stack</h3>
+              <div class="company-info">
+                <span class="company-name">APSHE(Smart-Bridge)</span>
+                <span class="experience-date">(2025) May - July · 2 mo</span>
+                <div class="experience-location">
+                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <span>Remote</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="experience-details">
+            <ul class="experience-bullets">
+              <p>
+                Enhanced skills in data manipulation and visualization.
+              </p>
+              <p>
+                Worked with Python libraries: Pandas, NumPy, and Matplotlib.
+              </p>
+              <p>
+                Applied data analysis techniques on real-world datasets.
+              </p>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section id="skills">
     <p class="section__text__p1">Explore My</p>
     <h1 class="title">Skills</h1>
-    <div class="experience-details-container">
+    <div class="skills-details-container">
       <div class="about-containers">
         <div class="details-container">
-          <h2 class="experience-sub-title">Programming Languages</h2>
+          <h2 class="skills-sub-title">Programming Languages</h2>
           <div class="article-container">
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>C++</h3>
                 <p>Intermediate</p>
@@ -157,11 +291,7 @@
             </article>
 
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>Java</h3>
                 <p>Intermediate</p>
@@ -169,11 +299,7 @@
             </article>
 
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>Python</h3>
                 <p>Intermediate</p>
@@ -183,14 +309,10 @@
         </div>
 
         <div class="details-container">
-          <h2 class="experience-sub-title">Web Technologies</h2>
+          <h2 class="skills-sub-title">Web Technologies</h2>
           <div class="article-container">
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>HTML</h3>
                 <p>Experienced</p>
@@ -198,11 +320,7 @@
             </article>
 
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>CSS</h3>
                 <p>Experienced</p>
@@ -210,11 +328,7 @@
             </article>
 
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>Java Script</h3>
                 <p>Basic</p>
@@ -222,11 +336,7 @@
             </article>
 
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>SQL</h3>
                 <p>Intermediate</p>
@@ -236,14 +346,18 @@
         </div>
 
         <div class="details-container">
-          <h2 class="experience-sub-title">System Skills</h2>
+          <h2 class="skills-sub-title">Tools & Cloud</h2>
           <div class="article-container">
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
+              <div>
+                <h3>AWS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>Linux</h3>
                 <p>Intermediate</p>
@@ -251,11 +365,7 @@
             </article>
 
             <article>
-              <img 
-              src="./assets/checkmark.png" 
-              alt="Experience-icon" 
-              class="icon"
-              />
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
                 <h3>Git</h3>
                 <p>Intermediate</p>
@@ -263,16 +373,51 @@
             </article>
           </div>
         </div>
+
+        <div class="details-container">
+          <h2 class="skills-sub-title">Core Skills</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
+              <div>
+                <p>Object Oriented Programming (OOPs)</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
+              <div>
+                <p>Data Structures and Algorithms (DSA)</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
+              <div>
+                <p>Database Management Systems (DBMS)</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
+              <div>
+                <p>Computer Networks (CN)</p>
+              </div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
+              <div>
+                <p>Operating Systems (OS)</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </div>
-    <img 
-    src="./assets/arrow.png" 
-    alt="Arrow icon" 
-    class="icon arrow" 
-    onclick="location.href='./#projects'"
-    />
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
   </section>
-  <section id="projects">
+  <!-- <section id="projects">
     <p class="section__text__p1">Browse My Projects</p>
     <h1 class="title">Projects</h1>
     <div class="experience-details-container">
@@ -287,6 +432,25 @@
         </div>
         <h2 class="experience-sub-title project-title">Project 1 (Youtube Clone)</h2>
         <div class="btn-container">
+           <div class="project-header">
+                        <h3>SPECTRIXO</h3>
+                    </div>
+                    <p class="project-description">Full-featured fashion e-commerce platform with product categorization and responsive design.</p>
+                    <div class="project-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Responsive</span>
+                    </div>
+                    <div class="project-features">
+                        <h4>Key Features:</h4>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> Product categorization</li>
+                            <li><i class="fas fa-check-circle"></i> Mobile-responsive design</li>
+                            <li><i class="fas fa-check-circle"></i> Interactive image hover effects</li>
+                            <li><i class="fas fa-check-circle"></i> Customer testimonials section</li>
+                        </ul>
+                    </div>
           <button class="btn btn-color-2 project-btn" 
           onclick="location.href='https://github.com/Challateja12345/You-tube-Clone/blob/main/index.html'">
           Github
@@ -350,25 +514,240 @@
     class="icon arrow" 
     onclick="location.href='./#contact'"
     />
+  </section> -->
+
+  <section id="projects">
+    <div class="section-heading">
+      <p class="section__text__p1">Browse My Projects</p>
+      <h1 class="title">Projects</h1>
+    </div>
+    <div class="projects-container">
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/Project-1.jpg" alt="Grilli-Restaurent">
+
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Grilli Restaurent</h3>
+            <div class="btn-container">
+              <button class="git"
+                onclick="location.href='https://github.com/Challateja12345/Grilli-Restaurent-Website'">
+                Github
+              </button>
+
+              <button class="view"
+                onclick="location.href='https://challateja12345.github.io/Grilli-Restaurent-Website/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <p class="project-description">Full-featured Restaurent Website with categorization and responsive design.</p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive</span>
+          </div>
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>1. Fully Responsive Design</li>
+              <li>2. Hero Slider on Home Page</li>
+              <li>3. Interactive Menu & Special Dish Section</li>
+              <li>4. nline Reservation/Booking Form</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/Sentiment.png" style="object-fit:cover;" alt="Sentiment Analysis">
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Sentiment Analysis</h3>
+            <div class="btn-container">
+              <button class="git" onclick="location.href='https://github.com/Challateja12345/Sentiment-Analysis'">
+                Github
+              </button>
+            </div>
+          </div>
+          <p class="project-description">ML model classifying restaurant reviews as positive/negative with 80% accuracy.
+          </p>
+          <div class="project-tech">
+            <span>Python</span>
+            <span>NLTK</span>
+            <span>scikit-learn</span>
+            <span>NLP</span>
+          </div>
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>1. TF-IDF vectorization</li>
+              <li>2. Text preprocessing pipeline</li>
+              <li>3. Interactive prediction system</li>
+              <li>4. Data visualization</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-image">
+          <img src="./assets/youtube.jpg" alt="Youtube">
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3>YouTube</h3>
+            <div class="btn-container">
+              <button class="git"
+                onclick="location.href='https://github.com/Challateja12345/You-tube-Clone/blob/main/index.html'">
+                Github
+              </button>
+
+              <button class="view" onclick="location.href='https://challateja12345.github.io/You-tube-Clone/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <p class="project-description">A responsive YouTube clone with video thumbnails, sidebar menu,top navigation
+            bar.</p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>1. Responsive Layout</li>
+              <li>2. YouTube-Inspired Design</li>
+              <li>3. Embedded Video Thumbnails</li>
+              <li>4. Navigation Bar with Search and Icons</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-image">
+          <img
+            src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Calculator">
+        </div>
+        <div class="project-content">
+          <div class="project-header">
+            <h3>Calculator</h3>
+            <div class="btn-container">
+              <button class="git"
+                onclick="location.href='https://github.com/Challateja12345/Calculator'">
+                Github
+              </button>
+
+              <button class="view" onclick="location.href='https://challateja12345.github.io/Calculator/'">
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <p class="project-description">Interactive calculator with arithmetic operations and keyboard support.</p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="project-features">
+            <h4>Key Features:</h4>
+            <ul>
+              <li>1. Basic operations (+, -, *, /)</li>
+              <li>2. Clear and backspace functions</li>
+              <li>3. Responsive design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section id="profiles">
+    <div class="section-heading">
+      <p class="section__text__p1">Visit My</p>
+      <h1 class="title">Profiles</h1>
+    </div>
+    <div class="content-card">
+      <div class="profiles-container">
+        <div class="profile-category">
+          <h3><img src="./assets/professional.png" alt="Email-icon" class="icon contact-icon email-icon" />
+            Professional Profiles</h3>
+          <div class="profile-grid">
+            <a href="https://www.linkedin.com/in/challa-divya-teja-naga-venkata-prasad-045335260?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BdZro8TZkT7CijnbNEVimog%3D%3D"
+              target="_blank" class="profile-card linkedin">
+              <span>LinkedIn</span>
+              <small>Connect professionally</small>
+            </a>
+            <a href="https://github.com/Challateja12345" target="_blank" class="profile-card github">
+              <span>GitHub</span>
+              <small>View my projects</small>
+            </a>
+          </div>
+        </div>
+        <div class="profile-category">
+          <h3>
+            <img src="./assets/coding.png" alt="Email-icon" class="icon contact-icon email-icon" />
+            Coding Profiles
+          </h3>
+          <div class="profile-grid">
+            <a href="https://leetcode.com/u/Ch_Teja/" target="_blank" class="profile-card leetcode">
+              <img src="https://leetcode.com/static/images/LeetCode_logo_rvs.png" alt="LeetCode" class="platform-logo">
+              <span>LeetCode</span>
+              <small>Problem solving</small>
+            </a>
+            <a href="https://www.geeksforgeeks.org/user/chdtnvpkwzf/" target="_blank"
+              class="profile-card geeksforgeeks">
+              <img src="https://media.geeksforgeeks.org/wp-content/uploads/20210915115837/gfg3-300x300.png"
+                alt="GeeksforGeeks" class="platform-logo">
+              <span>GeeksforGeeks</span>
+              <small>DSA practice</small>
+            </a>
+            <a href="https://www.hackerrank.com/profile/chdtnvprasad" target="_blank" class="profile-card hackerrank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/HackerRank_Icon-1000px.png" alt="HackerRank"
+                class="platform-logo">
+              <span>HackerRank</span>
+              <small>Coding challenges</small>
+            </a>
+          </div>
+        </div>
+        <div class="profile-category">
+          <h3><img src="./assets/other.png" alt="Email-icon" class="icon contact-icon email-icon" />
+            Other Profiles</h3>
+          <div class="profile-grid">
+            <a href="https://www.instagram.com/its_teja_69/profilecard/?igsh=MW82dXBwcW5oMGgybA==" target="_blank"
+              class="profile-card instagram">
+              <i class="fab fa-twitter"></i>
+              <span>Instagram</span>
+              <small>Personal life</small>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
-        <img 
-        src="./assets/email.png" 
-        alt="Email-icon" 
-        class="icon contact-icon email-icon"
-        />
+        <img src="./assets/email.png" alt="Email-icon" class="icon contact-icon email-icon" />
         <p><a href="mailto:examplemail@gmail.com">chdtnvprasad@gmail.com</a></p>
       </div>
       <div class="contact-info-container">
-        <img 
-        src="./assets/linkedin.png" 
-        alt="LinkedIn-icon" 
-        class="icon contact-icon"
-        />
+        <img src="./assets/whatsapp.png" alt="Whatsapp-icon" class="icon contact-icon phone-icon" />
+        <p><a href="https://wa.me/91934780798">+91<span>-9347807981</span></a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn-icon" class="icon contact-icon" />
         <p><a href="https://www.linkedin.com/in/challa-divya-teja-naga-venkata-prasad-045335260/">LinkedIn</a></p>
       </div>
     </div>
@@ -379,7 +758,9 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
+          <li><a href="#Skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#profiles">Profiles</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -389,5 +770,14 @@
     </p>
   </footer>
   <script src="script.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.querySelector(".menu-links");
+      const icon = document.querySelector(".hamburger-icon");
+      menu.classList.toggle("open");
+      icon.classList.toggle("open");
+    }
+  </script>
 </body>
+
 </html>
