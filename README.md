@@ -42,8 +42,3 @@ Live Website - https://challateja12345.github.io/Portfolio/
 Feel free to reach out:
 
 📧 Email: chdtnvprasad@gmail.com
-
-
-💼 LinkedIn: linkedin.com/in/prathyusha
-
-🐙 GitHub: github.com/prathyusha011
