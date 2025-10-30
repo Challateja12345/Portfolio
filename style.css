@@ -50,7 +50,7 @@ body {
 }
 
 .color-icon {
-  ransition: opacity 1s ease, color 1s ease, transform 1s ease;
+  transition: opacity 1s ease, color 1s ease, transform 1s ease;
 }
 
 html {
@@ -101,7 +101,7 @@ a:hover {
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--secondary-color);
 }
 
@@ -172,7 +172,7 @@ a:hover {
 }
 
 .menu-links.open {
-  max-height: 300px;
+  max-height: 400px;
 }
 
 .hamburger-icon.open span:first-child {
@@ -228,7 +228,50 @@ section {
   height: 400px;
   width: 400px;
   margin: auto 0;
+  background: radial-gradient(circle, #596e72 0%, transparent 70%);
+  border-radius: 50%;
+  /* width: 320px;
+  height: 320px; */
+  margin: 0 auto 20px;
+  animation: glowPulse 3s infinite;
 }
+.hero-photo {
+  border-radius: 80%;
+  width: 360px;
+  height: 360px;
+  object-fit: cover;
+  border: 6px solid #cbcbcb;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.268);
+  transition: transform 0.3s ease;
+}
+
+.hero-photo:hover {
+  transform: scale(1.05);
+}
+
+.typed-coder {
+  font-size: 20px;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 4px;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+/* Color variations for different text */
+.color1 { color: #e0eeff; font-style: italic; }
+.color2 { color: #e0eeff; font-weight: italic; }
+.color3 { color: #e0eeff; font-family: 'italic'; }
+.color4 { color: #e0eeff; text-transform: 'italic'; }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .typed-coder {
+    font-size: 16px;
+  }
+}
+
+
 
 .section__text {
   align-self: center;
@@ -387,6 +430,12 @@ section {
 
 .about-pic {
   border-radius: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .arrow {
@@ -403,6 +452,12 @@ section {
   border: var(--button-border);
   border-color: var(--container-border);
   text-align: center;
+  transition: all 0.3s ease;
+}
+
+.details-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(10, 10, 10, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .section-container {
@@ -433,105 +488,233 @@ section {
 }
 
 
-/* Skills */
-.experience-container {
+/* Custom variables scoped to the #experience section */
+#experience {
+  /* Redefining variables locally */
+  --experience-primary-color: #333;
+  --experience-secondary-color: #555;
+  --experience-accent-color: #007bff; /* Blue for key elements/CTAs */
+  --experience-card-bg: #f9f9f9; /* Light background for the content card */
+  --experience-card-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --experience-border-radius: 12px;
+  
+  /* Ensure the section uses a standard font for consistency */
+  font-family: 'Arial', sans-serif;
+  color: var(--experience-primary-color);
+  padding: 2rem 0; /* Add some vertical spacing to the section */
+}
+
+/* ----------------------------------
+ 1. Section Heading Styles
+ ---------------------------------- */
+#experience .section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+#experience .section__text__p1 {
+  font-size: 1.1rem;
+  color: var(--experience-secondary-color);
+  margin-bottom: -0.5rem;
+}
+
+#experience .title {
+  font-size: 2.5rem;
+  color: var(--experience-primary-color);
+}
+
+/* ----------------------------------
+ 2. Main Experience Container
+ ---------------------------------- */
+#experience .content-card {
+  background: var(--experience-card-bg);
+  border-radius: var(--experience-border-radius);
+  padding: 2rem;
+  box-shadow: var(--experience-card-shadow);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Use Flexbox for a vertical timeline effect */
+#experience .experience-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 2.5rem;
+  padding-left: 1.5rem;
+  position: relative;
 }
 
-.experience-item {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
-  border-color: black;
-  border: solid 1px;
+/* Timeline Line (The vertical bar) */
+#experience .experience-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0.5rem;
+  width: 2px;
+  height: 100%;
+  background-color: #ccc;
+}
+
+/* Individual Experience Card */
+#experience .experience-item {
+  position: relative;
+  padding-left: 2rem;
+  padding-bottom: 0.5rem;
+  padding-top: 10px;
+  border-radius: 10px;
   transition: all 0.3s ease;
+
 }
 
-.experience-item:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(13, 0, 255, 0.1);
-}
-
-.experience-header {
-  display: flex;
-  gap: 15px;
-  margin-bottom: 15px;
-  align-items: flex-start;
-}
-
-.company-logo {
-  width: 50px;
-  height: 50px;
-  background: rgb(255, 255, 255);
+/* Timeline Dot (The circle on the line) */
+#experience .experience-item::before {
+  content: '';
+  position: absolute;
+  top: 0.3rem;
+  left: 0.2rem;
+  width: 12px;
+  height: 12px;
+  background-color: var(--experience-accent-color);
   border-radius: 50%;
+  border: 2px solid var(--experience-card-bg); /* Use card background color */
+  z-index: 10;
+}
+#experience .experience-item:hover {
+  background-color: white;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(10, 10, 10, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#experience .experience-header {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  color: var(--primary-color);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.experience-title h3 {
-  color: var(--dark-color);
-  margin-bottom: 5px;
-  font-size: 18px;
+#experience .company-logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
-.company-info {
+#experience .experience-title h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--experience-primary-color);
+}
+
+#experience .company-info {
   display: flex;
-  gap: 15px;
   flex-wrap: wrap;
-  margin-bottom: 5px;
   align-items: center;
+  font-size: 0.95rem;
+  color: var(--experience-secondary-color);
+  gap: 0.5rem 1rem;
+  margin-top: 0.3rem;
 }
 
-.company-name {
+#experience .company-name {
   font-weight: 600;
-  color: rgb(240, 172, 1);
-  font-size: 12px;
+  color: var(--experience-secondary-color);
 }
 
-.experience-date {
-  background: rgb(163, 159, 159);
-  color: rgb(0, 0, 0);
-  padding: 2px 10px;
-  border-radius: 20px;
-  font-size: 10px;
-}
-
-.experience-location {
+#experience .experience-date,
+#experience .experience-location {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 10px;
-  color: var(--text-light);
 }
 
-.experience-bullets {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 15px;
+#experience .location-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.3rem;
+  opacity: 0.7;
 }
 
-.experience-bullets p {
-  margin-bottom: 10px;
+/* ----------------------------------
+ 4. Details and Bullet Points
+ ---------------------------------- */
+
+/* Key Tech Tags */
+#experience .key-tech-tags {
+  margin: 1rem 0 1.5rem;
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  line-height: 1.3;
-  font-size: 14px;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
-.experience-bullets i {
-  color: var(--accent-color);
-  margin-top: 3px;
-  flex-shrink: 0;
+#experience .tech-tag {
+  display: inline-block;
+  background-color: #e0f0ff;
+  color: var(--experience-accent-color);
+  padding: 0.3rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid #cce0ff;
 }
 
+/* Bullet Points */
+#experience .experience-bullets {
+  list-style-type: disc;
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+/* Style the list item text (for proper <li>) */
+#experience .experience-bullets li {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+#experience .experience-bullets li::marker {
+  color: var(--experience-accent-color);
+}
+
+/* If you are using the original <p> inside <ul> (which is non-semantic, but you might need it for backwards compatibility with your HTML): */
+#experience .experience-bullets p {
+  margin: 0 0 0.75rem 0;
+  line-height: 1.6;
+  /* This styling helps align text that was originally inside a <p> tag */
+  text-indent: -1.5rem; 
+  padding-left: 1.5rem;
+}
+
+
+/* ----------------------------------
+ 5. Responsive Adjustments
+ ---------------------------------- */
+
+@media (max-width: 768px) {
+  #experience .content-card {
+      padding: 1rem;
+  }
+
+  #experience .experience-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+  }
+
+  /* Keep the logo small on mobile or hide it if necessary */
+  #experience .company-logo img {
+      width: 30px;
+      height: 30px;
+  }
+  
+  #experience .experience-title h3 {
+      font-size: 1.25rem;
+  }
+
+  #experience .company-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.25rem;
+      margin-top: 0;
+  }
+}
 /* Experience Section */
 
 #skills {
@@ -571,181 +754,229 @@ article .icon {
   cursor: default;
 }
 
-/* Projects Section */
 
-/* #projects {
-  position: relative;
+/* Custom variables scoped to the #projects section */
+#projects {
+    --project-primary-color: #333;
+    --project-secondary-color: #555;
+    --project-accent-color: #007bff; /* Blue for buttons/highlights */
+    --project-card-bg: #fff; /* White card background */
+    --project-border-radius: 10px;
+    
+    font-family: 'Arial', sans-serif;
+    padding: 4rem 0; 
 }
 
-.color-container {
-  border-color: var(--container-border);
-  background: var(--primary-color-2);
+/* ----------------------------------
+   1. Section Heading Styles (Similar to Experience)
+   ---------------------------------- */
+#projects .section-heading {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.project-img {
-  border-radius: 2rem;
-  width: 100%;
-  height: 80%;
+#projects .section__text__p1 {
+    font-size: 1.1rem;
+    color: var(--project-secondary-color);
+    margin-bottom: -0.5rem;
 }
 
-.project-title {
-  margin: 1rem;
-  color: var(--secondary-color);
+#projects .title {
+    font-size: 2.5rem;
+    color: var(--project-primary-color);
 }
 
-.project-btn {
-  color: var(--secondary-color);
-  border-color: var(--container-border);
+/* ----------------------------------
+   2. Project Grid Container
+   ---------------------------------- */
+#projects .projects-container {
+    display: grid;
+    /* Three columns, equal width, minimum size of 300px per column */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Space between cards */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
-.project-btn:hover {
-  color: var(--primary-color);
-  border-color: var(--secondary-color);
-} */
-
-.projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 30px;
-  padding: 0 20px;
-  margin-top: 30px;
+/* ----------------------------------
+   3. Individual Project Card
+   ---------------------------------- */
+#projects .project-card {
+    background: var(--project-card-bg);
+    border-radius: var(--project-border-radius);
+    overflow: hidden; /* Important for containing image border radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle initial shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex; /* Makes the card content flex-aware */
+    flex-direction: column; /* Stacks image and content vertically */
+    height: 100%; /* Ensures all cards in a row are the same height */
 }
 
-.project-card {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
+/* Hover Effect for Engagement */
+#projects .project-card:hover {
+    transform: translateY(-8px); /* Lifts the card */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Deeper shadow */
 }
 
-.project-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 35px rgba(108, 99, 255, 0.2);
+/* ----------------------------------
+   4. Image and Content Styling
+   ---------------------------------- */
+#projects .project-image {
+    height: 200px; /* Fixed height for consistent look */
+    overflow: hidden;
 }
 
-.project-image {
-  position: relative;
-  height: 200px;
-  overflow: hidden;
+#projects .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image covers the container without distortion */
+    transition: transform 0.5s ease;
 }
 
-.project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+/* Zoom effect on hover */
+#projects .project-card:hover .project-image img {
+    transform: scale(1.05);
 }
 
-.project-card:hover .project-image img {
-  transform: scale(1.05);
+#projects .project-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Allows content area to fill remaining vertical space */
 }
 
-.project-links {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  display: flex;
-  gap: 10px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+/* ----------------------------------
+   5. Header and Buttons
+   ---------------------------------- */
+#projects .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align title and buttons to the top */
+    margin-bottom: 1rem;
 }
 
-.project-card:hover .project-links {
-  opacity: 1;
+#projects .project-header h3 {
+    font-size: 1.4rem;
+    color: var(--project-primary-color);
+    margin: 0;
+    line-height: 1.2;
 }
 
-.project-link {
-  width: 36px;
-  height: 36px;
-  background: var(--gradient);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgb(108, 125, 116);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+#projects .btn-container {
+    display: flex;
+    gap: 10px;
 }
 
-.project-link:hover {
-  background: rgb(82, 3, 147);
-  color: var(--primary-color);
-  transform: scale(1.1);
+#projects .btn-container button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+    white-space: nowrap;
 }
 
-.project-content {
-  padding: 20px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+#projects .btn-container .git {
+    background-color: #000000; /* GitHub Green */
+    color: white;
 }
 
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+#projects .btn-container .view {
+    background-color: rgb(202, 202, 202);
+    color: rgb(0, 0, 0);
 }
 
-.project-header h3 {
-  color: var(--dark-color);
-  font-size: 20px;
-  margin: 0;
+#projects .btn-container button:hover {
+    opacity: 0.9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.project-description {
-  color: var(--text-light);
-  font-size: 14px;
-  margin-bottom: 15px;
-  flex-grow: 1;
+/* ----------------------------------
+   6. Description and Tech Tags
+   ---------------------------------- */
+#projects .project-description {
+    color: var(--project-secondary-color);
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
-.project-tech {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 15px;
+#projects .project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto; /* Pushes the tech and features to the bottom of the card */
+    padding-top: 10px;
+    border-top: 1px dashed #eee;
 }
 
-.project-tech span {
-  background: black;
-  color: rgb(199, 196, 18);
-  padding: 4px 10px;
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
+#projects .project-tech span {
+    background-color: #f0f0f0;
+    color: var(--project-secondary-color);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
 
-.project-features h4 {
-  font-size: 16px;
-  margin-bottom: 10px;
-  color: var(--dark-color);
+/* ----------------------------------
+   7. Key Features (Optional but well-structured)
+   ---------------------------------- */
+#projects .project-features {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
 }
 
-.project-features ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+#projects .project-features h4 {
+    font-size: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: var(--project-primary-color);
 }
 
-.project-features li {
-  font-size: 14px;
-  margin-bottom: 8px;
-  display: flex;
-  align-items: flex-start;
-  gap: 8px;
+#projects .project-features ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
-.project-features i {
-  color: var(--accent-color);
-  margin-top: 2px;
-  font-size: 12px;
+#projects .project-features li {
+    font-size: 0.9rem;
+    color: var(--project-secondary-color);
+    margin-bottom: 0.3rem;
+    position: relative;
+    padding-left: 15px;
 }
 
+/* Custom checkmark-like bullet */
+#projects .project-features li::before {
+    content: "✓"; 
+    position: absolute;
+    left: 0;
+    color: #bd3939; /* Green checkmark */
+    font-weight: bold;
+}
+
+
+/* ----------------------------------
+   8. Responsive Adjustments
+   ---------------------------------- */
+@media (max-width: 992px) {
+    #projects .projects-container {
+        /* On medium screens, switch to two columns */
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    #projects .projects-container {
+        /* On small screens, switch to a single column */
+        grid-template-columns: 1fr;
+    }
+}
 /* Profiles */
 
 .profiles-container {
@@ -756,9 +987,15 @@ article .icon {
 }
 
 .profile-category {
-  background: #f9f9ff;
+  background: #ffffff;
   border-radius: 12px;
   padding: 20px;
+  transition: all 0.3s ease;
+  border: 2px solid #e0e0e0;
+}
+.profile-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(10, 10, 10, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .profile-category h3 {
@@ -771,9 +1008,10 @@ article .icon {
   font-size: 18px;
 }
 
+
 .profile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
 }
 
@@ -790,12 +1028,12 @@ article .icon {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgba(108, 99, 255, 0.1);
+  border: 1px solid rgba(255, 226, 99, 0.1);
 }
 
 .profile-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(12, 0, 243, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 1px 25px rgba(12, 0, 243, 0.15);
 }
 
 .profile-card.linkedin i,
@@ -832,7 +1070,7 @@ article .icon {
 
 .profile-card i {
   font-size: 36px;
-  margin-bottom: 10px;
+  margin-bottom: 1px;
 }
 
 .profile-card span {
@@ -843,7 +1081,8 @@ article .icon {
 
 .profile-card small {
   color: var(--text-light);
-  font-size: 13px;
+  font-size: 10px;
+  padding-top: 10px;
 }
 
 .platform-logo {
@@ -859,6 +1098,122 @@ article .icon {
   padding: 40px;
 }
 
+
+/*--------------------------------------------------------------
+# Services (Certifications)
+--------------------------------------------------------------*/
+
+.section-title h2 {
+  font-size: 20px; /* Decreased font size */
+  font-weight: 500;
+  color: #10355d;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.certification {
+  background-color: #fff;
+  padding: 10px; /* Decreased padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certification img {
+  width: 100%; /* Adjusted size to fill the container */
+  height: auto; /* Ensures aspect ratio is maintained */
+  max-height: 240px; /* Limit the height to prevent overflow */
+  border-radius: 8px;
+  object-fit: cover; /* Makes the image cover the container */
+  object-position: center; /* Centers the image */
+  margin-bottom: 10px;
+}
+
+.certification h3 {
+  font-size: 18px; /* Decreased font size */
+  font-weight: 500;
+  color: #343a40;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.certification p {
+  font-size: 13px; /* Decreased font size */
+  line-height: 1.5;
+  color: #6c757d;
+  text-align: center;
+}
+
+
+
+@media (max-width: 768px) {
+  .certification {
+    padding: 15px; /* Adjusted padding */
+  }
+  .certification img {
+    width: 100%; /* Ensures image fills the container */
+  }
+}
+
+/* Updated Certifications Grid Layout */
+.row {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  gap: 30px !important;
+  justify-items: center !important;
+}
+
+.col-md-4 {
+  width: 100% !important;
+  max-width: 400px !important;
+  height: 400px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.col-md-4:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(10, 10, 10, 0.3), 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section-title h2 {
+  text-align: center !important;
+  font-size: 2.5rem !important;
+  color: var(--secondary-color) !important;
+}
+
+.certification {
+  padding: 15px !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+  height: 100% !important;
+}
+
+.certification img {
+  height: 250px !important;
+  border-radius: 10px !important;
+  margin-bottom: 20px !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.certification h3 {
+  font-size: 1.2rem !important;
+  margin-bottom: 15px !important;
+  color: var(--secondary-color) !important;
+}
+
+.certification p {
+  font-size: 0.9rem !important;
+  line-height: 1.6 !important;
+  color: var(--secondary-color-2) !important;
+  flex-grow: 1 !important;
+}
+
+
+
 /* Contact */
 
 #contact {
@@ -866,6 +1221,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  margin-top: 80px;
 }
 
 .contact-info-upper-container {
@@ -910,4 +1266,4 @@ footer {
 footer p {
   text-align: center;
   margin-top: 30px;
-}
+  }
