@@ -7,6 +7,8 @@
   <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaqueries.css">
+  <!-- Typed.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 
 </head>
@@ -21,6 +23,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#certifications">Certifications</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -39,6 +42,7 @@
         <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
         <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
         <li><a href="#profiles" onclick="toggleMenu()">Profiles</a></li>
+        <li><a href="#certifications" onclick="toggleMenu()">Certifications</a></li>
         <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
       </div>
     </div>
@@ -46,12 +50,12 @@
 
   <section id="profile">
     <div class="section__pic-container">
-      <img src="./assets/profile-pic.jpg" alt="Teja Profile Picture">
+      <img src="./assets/profile-pic.jpg" alt="Teja Profile Picture" class="hero-photo">
     </div>
     <div class="section__text">
       <p class="section__text__p1">Hello, I'm</p>
       <h1 class="title">Challa Teja</h1>
-      <P class="section__text__p2">Coder</P>
+      <span class="typed-coder" id="typed" data-typed-items="Full Stack Web Developer, AWS Cloud Developer, Skilled in MongoDB, Skilled in C++"></span>
       <div>
         <button class="btn btn-color-2" onclick="window.open('./assets/Teja_Challa_Resume.pdf')">
           Download CV
@@ -81,24 +85,7 @@
       </div>
       <div class="about-details-container">
         <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Certifications</h3>
-            <p class="certification__title">AWS Cloud Practitioner Essentials</p>
-            <p class="certification__details">AWS - Certificate of Completion</p>
-            <button class="btn-color-3" onclick="window.open('./assets/AWS.pdf')">
-              View
-            </button>
-            </br>
-            </br>
-            <p class="certification__details">These are all the certifications I've completed to support my career
-              goals and showcase my knowledge in relevant areas.
-            </p>
-            <button class="btn-color-3"
-              onclick="window.open('https://drive.google.com/drive/folders/1Gmq9b1rBGo1dkIRjbqPqBTHjern7Phnc?usp=drive_link')">
-              View
-            </button>
-          </div>
+        
           <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="icon" />
             <h3>Education</h3>
@@ -117,10 +104,18 @@
         </div>
         <div class="text-container">
           <p>
-            Hello! I am Challa Divya Teja Naga Venkata Prasad, a third-year Information Technology (IT)
-            student at Aditya College of Engineering and Technology. I have good programming
-            skills with quick learning ability, leadership qualities and effective communication
-            skills. I'm committed to finding a position where I can comfortably use my skills in a reputable company.
+            I'm <span style="font-weight: bold; color: #0d6efd;">Challa Divya Teja Naga Venkata prasad</span>,
+             a passionate <span style="font-weight: bold;">IT student</span> 
+             and aspiring <span style="font-weight: bold;">web developer</span>
+              with hands-on experience in <span style="font-weight: bold;">full stack development,AWS cloud development</span>
+              . I enjoy turning ideas into <em>real-world web applications</em>
+              , with a focus on <span style="color: #0d6efd;">clean UI</span>
+               and <span style="color: #0d6efd;">user-friendly design</span>
+               . Skilled in <span style="font-weight: bold;">C++</span>
+               , <span style="font-weight: bold;">Java</span>, <span style="font-weight: bold;">JavaScript</span>
+               , <span style="font-weight: bold;">MongoDB</span>, and <span style="font-weight: bold;">React</span>
+               , I'm also committed to improving my <em>communication skills</em> and continuously learning new technologies to grow in the <span style="font-weight: bold;">software industry</span>
+               . My goal is to build <span style="font-weight: bold;">impactful digital solutions</span> while working towards a <span style="font-weight: bold;">stable and respected career</span>.
           </p>
         </div>
       </div>
@@ -130,148 +125,185 @@
 
   <section id="experience">
     <div class="section-heading">
-      <p class="section__text__p1">My Experiences</p>
-      <h1 class="title">Experience</h1>
+      <p class="section__text__p1">My Journey</p>
+      <h1 class="title">Experience & Internships</h1>
     </div>
     <div class="content-card">
       <div class="experience-container">
+
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-logo">
-              <img src="./assets/aws.png" alt="AWS-icon" class="icon contact-icon aws-icon" />
+              <img src="./assets/aws.png" alt="AWS-icon" class="icon company-icon" />
             </div>
             <div class="experience-title">
               <h3>AWS Cloud Trainee</h3>
               <div class="company-info">
                 <span class="company-name">Innovative Origin</span>
-                <span class="experience-date">(2024) Jul - Sep · 3 months</span>
+                <span class="experience-date">Jul 2024 – Sep 2024 (3 months)</span>
                 <div class="experience-location">
-                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <img src="./assets/location.png" alt="Location-icon" class="icon location-icon" />
                   <span>Remote</span>
                 </div>
               </div>
             </div>
           </div>
           <div class="experience-details">
+            <div class="key-tech-tags">
+                <span class="tech-tag">AWS EC2</span>
+                <span class="tech-tag">S3</span>
+                <span class="tech-tag">VPC</span>
+                <span class="tech-tag">CloudFormation</span>
+                <span class="tech-tag">CloudWatch</span>
+            </div>
             <ul class="experience-bullets">
-              <p>
-                • Gained hands-on experience with 20+ AWS services including EC2, S3, VPC, IAM, RDS and others.
-              </p>
-              <p>
-                • Configured and managed cloud infrastructure with security best practices.
-              </p>
-              <p>
-                • Automated deployments using CloudFormation and monitored systems with CloudWatch.
-              </p>
-              <p>
-                • Optimized performance and implemented networking essentials.
-              </p>
+              <li>Provisioned and managed scalable cloud infrastructure using 20+ AWS services, including EC2, S3, and RDS.</li>
+              <li>Automated infrastructure deployment using CloudFormation templates, significantly reducing setup time.</li>
+              <li>Configured network security (VPC, Security Groups) and implemented IAM best practices for robust access control.</li>
+              <li>Optimized resource utilization and monitored application health using CloudWatch metrics and alarms.</li>
             </ul>
           </div>
         </div>
+
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-logo">
-              <img src="./assets/aiml.png" alt="Aiml-icon" class="icon contact-icon aiml-icon" />
+              <img src="./assets/aiml.png" alt="Aiml-icon" class="icon company-icon" />
             </div>
             <div class="experience-title">
               <h3>AI/ML Intern</h3>
               <div class="company-info">
                 <span class="company-name">APSSDC</span>
-                <span class="experience-date">(2024) May - Jun · 2 months</span>
+                <span class="experience-date">May 2024 – Jun 2024 (2 months)</span>
                 <div class="experience-location">
-                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <img src="./assets/location.png" alt="Location-icon" class="icon location-icon" />
                   <span>Remote</span>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="experience-details">
+            <div class="key-tech-tags">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">NLP</span>
+                <span class="tech-tag">Scikit-learn</span>
+                <span class="tech-tag">Pandas</span>
+                <span class="tech-tag">Naive Bayes</span>
+            </div>
             <ul class="experience-bullets">
-              <p>
-                • Built a sentiment analysis model with 80% accuracy using Naive Bayes classifier.
-              </p>
-              <p>
-                • Applied NLP techniques including tokenization and TF-IDF on real-time reviews.
-              </p>
-              <p>
-                • Utilized Python libraries: Pandas, NLTK, Word Cloud, and Scikit-learn.
-              </p>
-              <p>
-                • Evaluated model performance using various ML metrics.
-              </p>
+              <li>Developed a sentiment analysis model that achieved 80% accuracy on real-time customer reviews.</li>
+              <li>Applied Natural Language Processing (NLP) techniques like tokenization and TF-IDF for feature extraction.</li>
+              <li>Utilized Python libraries including NLTK, Word Cloud, and Scikit-learn for model building and visualization.</li>
+              <li>Evaluated and fine-tuned model performance using metrics such as precision, recall, and F1-score.</li>
             </ul>
           </div>
         </div>
+
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-logo">
-              <img src="./assets/coding.png" alt="Coding-icon" class="icon contact-icon Coding-icon" />
+              <img src="./assets/coding.png" alt="Coding-icon" class="icon company-icon" />
             </div>
             <div class="experience-title">
               <h3>Web Development Intern</h3>
               <div class="company-info">
                 <span class="company-name">Tech-Sonix</span>
-                <span class="experience-date">April 2024 · 1 month</span>
+                <span class="experience-date">Apr 2024 (1 month)</span>
                 <div class="experience-location">
-                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <img src="./assets/location.png" alt="Location-icon" class="icon location-icon" />
                   <span>Remote</span>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="experience-details">
+            <div class="key-tech-tags">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Responsive Design</span>
+            </div>
             <ul class="experience-bullets">
-              <p>
-                • Develop a responsive Web Application with an engaging landing page using HTML, CSS, and Java Script.
-              </p>
-              <p>
-                • Designed an engaging landing page with responsive design.
-              </p>
-              <p>
-                • Gained practical experience in front-end development and debugging.
-              </p>
+              <li>Developed a fully responsive web application with an engaging landing page, focusing on mobile-first design.</li>
+              <li>Gained practical experience in front-end development, including DOM manipulation using native JavaScript.</li>
+              <li>Implemented modern CSS techniques for visual effects and ensured cross-browser compatibility.</li>
+              <li>Contributed to debugging and troubleshooting front-end code issues in a simulated team environment.</li>
             </ul>
           </div>
         </div>
+
         <div class="experience-item">
           <div class="experience-header">
             <div class="company-logo">
-              <img src="./assets/full stack.png" alt="FullStack-icon" class="icon contact-icon fullstack-icon" />
+              <img src="./assets/full stack.png" alt="FullStack-icon" class="icon company-icon" />
             </div>
             <div class="experience-title">
               <h3>FullStack Developer - MERN Stack</h3>
               <div class="company-info">
-                <span class="company-name">APSHE(Smart-Bridge)</span>
-                <span class="experience-date">(2025) May - July · 2 mo</span>
+                <span class="company-name">APSHE (Smart-Bridge)</span>
+                <span class="experience-date">May 2025 – Jul 2025 (2 months)</span>
                 <div class="experience-location">
-                  <img src="./assets/location.png" alt="Location-icon" class="icon contact-icon location-icon" />
+                  <img src="./assets/location.png" alt="Location-icon" class="icon location-icon" />
                   <span>Remote</span>
                 </div>
               </div>
-
             </div>
           </div>
           <div class="experience-details">
+            <div class="key-tech-tags">
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">REST APIs</span>
+            </div>
             <ul class="experience-bullets">
-              <p>
-                •	Worked as a full-stack web developer intern using the MERN Stack (MongoDB, Express.js, React.js, Node.js).
-              </p>
-              <p>
-                •	Developed and maintained full-stack applications, handling both front-end and back-end tasks.
-              </p>
-              <p>
-                •	Contributed to the entire software development lifecycle, from design and development to testing and deployment
-              </p>
+              <li>Worked as a full-stack developer, specializing in the MERN Stack to build and connect robust applications.</li>
+              <li>Designed and implemented RESTful APIs using Node.js/Express.js, connecting the React front-end to a MongoDB database.</li>
+              <li>Contributed to the entire software development lifecycle, from database schema design to deployment.</li>
+              <li>Utilized state management in React.js to create dynamic and efficient user interfaces.</li>
             </ul>
           </div>
         </div>
+
+        <div class="experience-item">
+          <div class="experience-header">
+            <div class="company-logo">
+              <img src="./assets/bluestock.png" alt="FullStack-icon" class="icon company-icon" />
+            </div>
+            <div class="experience-title">
+              <h3>Software Development Engineer - (SDE)</h3>
+              <div class="company-info">
+                <span class="company-name">Bluestock ™</span>
+                <span class="experience-date">May 2025 – Jul 2025 (2 months)</span>
+                <div class="experience-location">
+                  <img src="./assets/location.png" alt="Location-icon" class="icon location-icon" />
+                  <span>Remote</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="experience-details">
+            <div class="key-tech-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">REST APIs</span>
+            </div>
+            <ul class="experience-bullets">
+              <li>Worked as a Full-Stack Developer specializing in the MERN stack, building and integrating scalable web applications.</li>
+              <li>Developed and optimized RESTful APIs using Node.js and Express.js, connecting a React.js front end with MongoDB for efficient data management.</li>
+              <li>Contributed to the entire software development lifecycle, from database schema design to deployment.</li>
+              <li>Utilized state management in React.js to create dynamic and efficient user interfaces.</li>
+            </ul>
+          </div>
+        </div>
+
       </div>
     </div>
-
-  </section>
+</section>
 
 
   <section id="skills">
@@ -301,7 +333,7 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
-                <h3>Python</h3>
+                <h3>C</h3>
                 <p>Intermediate</p>
               </div>
             </article>
@@ -330,15 +362,15 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
-                <h3>Java Script</h3>
-                <p>Basic</p>
+                <h3>JavaScript</h3>
+                <p>Intermediate</p>
               </div>
             </article>
 
             <article>
               <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
-                <h3>SQL</h3>
+                <h3>MongoDB</h3>
                 <p>Intermediate</p>
               </div>
             </article>
@@ -367,7 +399,7 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
               <div>
-                <h3>Git</h3>
+                <h3>VS Code</h3>
                 <p>Intermediate</p>
               </div>
             </article>
@@ -405,116 +437,15 @@
               </div>
             </article>
 
-            <article>
-              <img src="./assets/checkmark.png" alt="Experience-icon" class="icon" />
-              <div>
-                <p>Operating Systems (OS)</p>
-              </div>
-            </article>
           </div>
         </div>
       </div>
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
   </section>
-  <!-- <section id="projects">
-    <p class="section__text__p1">Browse My Projects</p>
-    <h1 class="title">Projects</h1>
-    <div class="experience-details-container">
-      <div class="about-containers">
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img 
-          src="./assets/project_1.png" 
-          alt="Project-1" 
-          class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Project 1 (Youtube Clone)</h2>
-        <div class="btn-container">
-           <div class="project-header">
-                        <h3>SPECTRIXO</h3>
-                    </div>
-                    <p class="project-description">Full-featured fashion e-commerce platform with product categorization and responsive design.</p>
-                    <div class="project-tech">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Responsive</span>
-                    </div>
-                    <div class="project-features">
-                        <h4>Key Features:</h4>
-                        <ul>
-                            <li><i class="fas fa-check-circle"></i> Product categorization</li>
-                            <li><i class="fas fa-check-circle"></i> Mobile-responsive design</li>
-                            <li><i class="fas fa-check-circle"></i> Interactive image hover effects</li>
-                            <li><i class="fas fa-check-circle"></i> Customer testimonials section</li>
-                        </ul>
-                    </div>
-          <button class="btn btn-color-2 project-btn" 
-          onclick="location.href='https://github.com/Challateja12345/You-tube-Clone/blob/main/index.html'">
-          Github
-          </button>
+ 
 
-          <button class="btn btn-color-2 project-btn" 
-          onclick="location.href='https://challateja12345.github.io/You-tube-Clone/'">
-          Live Demo
-          </button>
-        </div>
-      </div>
 
-      <div class="details-container color-container">
-        <div class="article-container">
-          <img 
-          src="./assets/project_2.png" 
-          alt="Project-1" 
-          class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Project 2 (Portfolio Website)</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" 
-          onclick="location.href='https://github.com/Challateja12345/You-tube-Clone/blob/main/index.html'">
-          Github
-          </button>
-
-          <button class="btn btn-color-2 project-btn" 
-          onclick="location.href='https://challateja12345.github.io/You-tube-Clone/'">
-          Live Demo
-          </button>
-        </div>
-      </div>
-
-        <div class="details-container color-container">
-        <div class="article-container">
-          <img 
-          src="./assets/project-3.png" 
-          alt="Project-1" 
-          class="project-img"
-          />
-        </div>
-        <h2 class="experience-sub-title project-title">Project 3 (Grilli Restaurent)</h2>
-        <div class="btn-container">
-          <button class="btn btn-color-2 project-btn" 
-          onclick="location.href='https://github.com/Challateja12345/Grilli-Restaurent-Website'">
-          Github
-          </button>
-
-          <button class="btn btn-color-2 project-btn" 
-          onclick="location.href='https://challateja12345.github.io/Grilli-Restaurent-Website/'">
-          Live Demo
-          </button>
-        </div>
-      </div>
-    </div>
-    </div>
-    <img 
-    src="./assets/arrow.png" 
-    alt="Arrow icon" 
-    class="icon arrow" 
-    onclick="location.href='./#contact'"
-    />
-  </section> -->
 
   <section id="projects">
     <div class="section-heading">
@@ -567,7 +498,7 @@
         </div>
         <div class="project-content">
           <div class="project-header">
-            <h3>Grilli Restaurent</h3>
+          <h3>Grilli Restaurant</h3>
             <div class="btn-container">
               <button class="git"
                 onclick="location.href='https://github.com/Challateja12345/Grilli-Restaurent-Website'">
@@ -580,7 +511,7 @@
               </button>
             </div>
           </div>
-          <p class="project-description">Full-featured Restaurent Website with categorization and responsive design.</p>
+          <p class="project-description">Full-featured Restaurant Website with categorization and responsive design.</p>
           <div class="project-tech">
             <span>HTML5</span>
             <span>CSS3</span>
@@ -593,7 +524,7 @@
               <li>1. Fully Responsive Design</li>
               <li>2. Hero Slider on Home Page</li>
               <li>3. Interactive Menu & Special Dish Section</li>
-              <li>4. nline Reservation/Booking Form</li>
+              <li>4. Online Reservation/Booking Form</li>
             </ul>
           </div>
         </div>
@@ -707,7 +638,6 @@
         </div>
       </div>
     </div>
-
     </section>
 
   <section id="profiles">
@@ -770,7 +700,6 @@
           <div class="profile-grid">
             <a href="https://www.instagram.com/its_teja_69/profilecard/?igsh=MW82dXBwcW5oMGgybA==" target="_blank"
               class="profile-card instagram">
-              <i class="fab fa-twitter"></i>
               <span>Instagram</span>
               <small>Personal life</small>
             </a>
@@ -782,17 +711,109 @@
   </section>
 
 
+  <!-- Certifications  -->
+
+  <!-- ======= Services Section ======= -->
+<section id="certifications" class="certifications">
+  <div class="container">
+    <div class="section-title">
+      <h2>My Certifications</h2>
+    </div>
+    <div class="row">
+    
+         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/Oracle Cloud Infrastructure 2025 Certified Generative AI Professional-1.png" alt="DBMS Certification">
+          <h3>Generative AI Professional</h3>
+
+          <p>I earned the Generative AI Professional certification from Oracle Academy after successfully passing the certification exam on Sep 25, 2025..</p>
+
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/Oracle Cloud Infrastructure Certified AI Foundations Associate-1.png" alt="Python Certification">
+          <h3>AI Foundations Associate</h3>
+          <p>I obtained the AI Foundations Associate certification from Oracle Academy after successfully passing the certification exam on Oct 8, 2025.</p>
+        </div>
+      </div>
+
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/AWS Course Completion Certificate-1.png" alt="HTML & CSS Certification">
+          <h3> AWS Cloud Practitioner Essentials</h3>
+          <p>I earned the AWS Cloud Practitioner Essentials certification after completing the training and receiving certification from Amazon Web Services (AWS) on Nov 4, 2024</p>
+        </div>
+      </div>
+   
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/22p31a1225-The Joy of Computing using Python (1)-1.png" alt="SQL Certification">
+          <h3>The Joy of Computing Using Python</h3>
+          <p>I earned The Joy of Computing Using Python certification after successfully completing the course and passing the final examination conducted by NPTEL, on oct 12, 2024.</p>
+        </div>
+      </div>
+
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/Introduction To Internet Of Things-1.png" alt="Flipkart Grid Participation Certification">
+          <h3>Introduction To Internet Of Things</h3>
+          <p>I earned the Introduction to Internet of Things certification after successfully completing the course and passing the final examination conducted by NPTEL, on Apr 28, 2025.</p>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/_certificate_chdtnvprasad-gmail-com_2d44ddd0-933d-42d1-a0f4-dc9e283fd74e-1.png" alt="Problem Solving Certification">
+          <h3>Problem Solving</h3>
+          <p>I earned the Certificate of Accomplishment in Problem Solving from HackerRank by successfully completing the skill certification test on February 5, 2023.</p>
+        </div>
+      </div>
+
+ 
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/JavaScript_Essentials_1_certificate_chdtnvprasad-gmail-com_1c236e89-ee45-4247-aa93-040b347bd034-1.png" alt="MS Excel Certification">
+          <h3>JavaScript Essentials 1</h3>
+          <p>I earned the JavaScript Essentials 1 certification after successfully completing the course and assessment through the Cisco Networking Academy program on Oct 25, 2025.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/_certificate_chdtnvprasad-gmail-com_6b134c1f-f7b2-45e0-b177-0b66c29d3740-1.png" alt="MS Excel Certification">
+          <h3> CSS Essentials</h3>
+          <p>I earned the  CSS Essentials certification after successfully completing the course and assessment through the Cisco Networking Academy program on jun 28, 2025.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="certification">
+          <img src="./assets/_certificate_chdtnvprasad-gmail-com_d29ae55e-1cab-4249-9980-d1b23ff00ec7-1.png" alt="MS Excel Certification">
+          <h3>HTML Essentials</h3>
+          <p>I earned the HTML Essentials certification after successfully completing the course and assessment through the Cisco Networking Academy program on Jun 27, 2025.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+    <!-- End Testimonials Section -->
+
+
   <section id="contact">
     <p class="section__text__p1">Get in Touch</p>
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
         <img src="./assets/email.png" alt="Email-icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:examplemail@gmail.com">chdtnvprasad@gmail.com</a></p>
+        <p><a href="mailto:chdtnvprasad@gmail.com">chdtnvprasad@gmail.com</a></p>
       </div>
       <div class="contact-info-container">
         <img src="./assets/whatsapp.png" alt="Whatsapp-icon" class="icon contact-icon phone-icon" />
-        <p><a href="https://wa.me/91934780798">+91<span>-9347807981</span></a></p>
+        <p><a href="https://wa.me/919347807981">+91<span>-9347807981</span></a></p>
       </div>
       <div class="contact-info-container">
         <img src="./assets/linkedin.png" alt="LinkedIn-icon" class="icon contact-icon" />
@@ -806,9 +827,10 @@
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
           <li><a href="#experience">Experience</a></li>
-          <li><a href="#Skills">Skills</a></li>
+          <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#profiles">Profiles</a></li>
+          <li><a href="#certifications">Certifications</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -818,18 +840,9 @@
     </p>
   </footer>
   <script src="script.js"></script>
-  <script>
-    function toggleMenu() {
-      const menu = document.querySelector(".menu-links");
-      const icon = document.querySelector(".hamburger-icon");
-      menu.classList.toggle("open");
-      icon.classList.toggle("open");
-    }
-  </script>
 </body>
 
 </html>
-
 
 
 
